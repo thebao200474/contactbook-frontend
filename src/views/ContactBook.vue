@@ -133,8 +133,8 @@ export default {
     },
 
     goToAddContact() {
-      alert("Chưa làm trang thêm liên hệ");
-    },
+  this.$router.push({ name: "contact.add" });
+},
   },
 
   mounted() {

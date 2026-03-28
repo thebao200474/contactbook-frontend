@@ -7,16 +7,27 @@ const routes = [
     name: "contactbook",
     component: ContactBook,
   },
-{
-  path: "/contacts/:id",
-  name: "contact.edit",
-  component: () => import("@/views/ContactEdit.vue"),
-  props: true,
-},
+
+  // 🔥 THÊM ROUTE ADD
+  {
+    path: "/contacts/add",
+    name: "contact.add",
+    component: () => import("@/views/ContactAdd.vue"),
+  },
+
+  // EDIT
+  {
+    path: "/contacts/:id",
+    name: "contact.edit",
+    component: () => import("@/views/ContactEdit.vue"),
+    props: true,
+  },
+
+  // 404
   {
     path: "/:pathMatch(.*)*",
     name: "notfound",
-    component: () => import("../views/NotFound.vue"),
+    component: () => import("@/views/NotFound.vue"),
   },
 ];
 
